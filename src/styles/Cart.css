@@ -1,0 +1,11 @@
+.productRow{
+    /* background-color: blue; */
+    /* display: flex; */
+    align-items: center;
+    border: 5px;
+    width: 350px;
+}
+.productRow img{
+    width: 100px;
+    height: 100px;
+}

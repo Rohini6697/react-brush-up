@@ -4,6 +4,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import ProductCard from './components/ProductCard'
+import Cart from './components/Cart'
+import {cart} from './data/CartProduct'
 
 function App() {
   const name = 'Rohini';
@@ -19,7 +21,7 @@ function App() {
       <h1>Hi My Name is {name}!</h1>
       {/* {fruits.map((fruit) => (
         <h3 key= {fruit}>Hi, {fruit}</h3>
-      ))} */}
+      ))}
 
       {
         ecart.map((item) => (
@@ -29,7 +31,19 @@ function App() {
       <button onClick={()=>setCount(count+1)}>+</button>
       <h1>{count}</h1>
       <button onClick={()=>setCount(count-1)}>-</button>
-      <button onClick={() => setCount(0)}>Resest</button>
+      <button onClick={() => setCount(0)}>Resest</button> */}
+
+      {/* <Cart/> */}
+      <div>
+        <h2>number of items in Cart : </h2>
+      </div>
+      {
+        cart.map((item) => (
+          <Cart key={item.prodName} {...item}/>
+        ))
+      }
+
+
     </>
 
     
