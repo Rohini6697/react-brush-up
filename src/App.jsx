@@ -21,6 +21,10 @@ function App() {
     setCartCount(cartCount+1);
   }
 
+  const reduceCart = () =>{
+    setCartCount(cartCount-1);
+  }
+
   return (
     <>
       <h1>Hi My Name is {name}!</h1>
@@ -44,7 +48,7 @@ function App() {
       </div>
       {
         cart.map((item) => (
-          <Cart key={item.prodName} {...item} onAdd={handleCart}/>
+          <Cart key={item.prodName} {...item} onAdd={handleCart} ccount={cartCount} reduCart = {reduceCart}/>
         ))
       }
 
