@@ -15,6 +15,11 @@ function App() {
                 ];
   const [count,setCount] = useState(0);
   // const [prodName,prodPrice] = useState;
+  const [cartCount,setCartCount] = useState(0);
+
+  const handleCart = () =>{
+    setCartCount(cartCount+1);
+  }
 
   return (
     <>
@@ -35,11 +40,11 @@ function App() {
 
       {/* <Cart/> */}
       <div>
-        <h2>number of items in Cart : </h2>
+        <h2>number of items in Cart : {cartCount}</h2>
       </div>
       {
         cart.map((item) => (
-          <Cart key={item.prodName} {...item}/>
+          <Cart key={item.prodName} {...item} onAdd={handleCart}/>
         ))
       }
 
